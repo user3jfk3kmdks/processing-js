@@ -1,0 +1,182 @@
+var game = function()  {
+var s;
+var q;
+var b;
+var a = -25;
+var x = 0;
+var z = 0;
+var e = 10;
+var w = 5;
+var r = 3;
+var z = second();  
+var m = minute(); 
+var h = hour(); 
+var page;
+var circle;
+var randNumY;
+var randNumX;
+var randNum1;
+var randNum2;
+var gamePage;
+var y = Math.floor(Math.random() * 580) + 1;
+var m = Math.floor(Math.random() * 580) + 1;
+var l = Math.floor(Math.random() * 580) + 1;
+var w = Math.floor(Math.random() * 580) + 1;
+var q = Math.floor(Math.random() * 580) + 1;
+var i = Math.floor(Math.random() * 580) + 1;
+var o = Math.floor(Math.random() * 580) + 1;
+var p = Math.floor(Math.random() * 580) + 1;
+var c = Math.floor(Math.random() * 580) + 1;
+var v = Math.floor(Math.random() * 580) + 1;
+var b = Math.floor(Math.random() * 580) + 1;
+var n = Math.floor(Math.random() * 580) + 1;
+//This is the starting page
+var homePage = function() {
+
+        page = 'home';
+        background(100,200,443);
+        fill(255, 255, 255);
+        s = [130,340,350,150];
+        q = [10,570,20,20];
+        rect(s[0],s[1],s[2],s[3]);
+        
+        textSize(145);
+        fill(0, 0, 0);
+        text("Start", 150,463);
+        fill(255, 255, 255);
+        rect(q[0],q[1],q[2],q[3]);
+        fill(0, 0, 0);
+        textSize(20);
+        text("?",14,588);
+        
+        fill(255, 255, 255);
+        rect(50,10,500,200);
+        fill(0, 0, 0);
+        textSize(145);
+        text("Bopper",60,150);
+       
+        mouseClicked = function() {
+        if (page === 'home' && mouseX > s[0] && mouseX <  s[0] +          s[2] && mouseY > s[1] && mouseY < s[1] + s[3] ) {
+        gamePage();
+    
+    
+    
+        } else if (page === 'home' && mouseX > q[0] && mouseX <           q[0] + q[2] && mouseY > q[1] && mouseY < q[1] + q[3]) {
+        draw = function() {
+        background(100,200,443);
+        fill(255, 255, 255);
+        rect(10,10,580,580);
+        fill(0, 0, 0);
+        textSize(75);
+        text("What is Bopper?", 20, 80);
+        stroke(0, 0, 0);
+        fill(0, 0, 0);
+        rect(470,520,100,50);
+        fill(255, 255, 255);
+        textSize(45);
+        text("Back",470,560);
+        textSize(60);
+        fill(0, 0, 0);
+        text("In Bopper there is a \r\ngreen ball called \r\nMootz and every time \r\nthat you tap on Mootz you earn a poin.         But it you fail to click on \r\nMootz you will get a              \r\nscreen showing \r\nyour score.", 20, 140);
+        mouseClicked = function()  {
+        if (mouseX > 470 && mouseX < 570 && mouseY > 520 && mouseY         < 570) {
+        draw = function() {
+        homePage();
+        circle();
+    
+};
+}
+};
+}; 
+}
+};
+};
+//This is the Game page
+var gamePage = function()  {
+    z = 60;
+    draw = function() {
+    z = z - 0.01;
+    fill(233, 237, 125);
+    rect(1,1,80,20); 
+    stroke(233, 237, 125);
+    rect(1,578,280,20);
+    
+    fill(0, 0, 0);
+    textSize(20);
+    text("Score:"+x,10,20);
+    
+    fill(0, 0, 0);
+    textSize(20);
+    text("time:"+z,10,593);
+    
+    if (z <= 0) {
+    textSize(45);
+    text("You Had a Score of "+z,100,100);
+    background(255, 0, 0);
+    
+    } else if (mouseX > y[0] && mouseX < y[0]+50 && mouseY > y[1] && mouseY < y[1]+50) {
+    x=(1);
+    
+    }   
+  
+    
+    
+    };
+    
+
+
+   
+    page = "game";
+    background(233, 237, 125);
+        
+    fill(21,255,0);
+    y = [y,m];
+    ellipse(y[0], y[1], 50,50);
+    if (second()>= 60) {
+    background(255, 0, 0);
+    }
+    
+mousePressed = function()  {
+    if (mouseX > y[0] && mouseX < y[0]+50 && mouseY > y[1] &&      mouseY < y[1]+50) { 
+    background(233, 237, 125);
+    fill(21,255,0);
+    l = [l,w];
+    stroke(0,0,0);
+    ellipse(l[0], l[1], 50,50);
+    stroke(0,0,0);
+    
+    } else if (mouseX > l[0]+50 && mouseX < l[0] && mouseY >       l[1] && mouseY < l[1]+50) {
+    background(233, 237, 125);
+    fill(21,255,0);
+    stroke(0,0,0);
+    y = [y,m];
+    ellipse(y[0], y[1], 50,50);
+    stroke(0,0,0);    
+        
+    }
+    };
+
+    }; 
+//This is the moving circle
+    var circle = function() { 
+        draw = function() {
+        if ( page === 'home' ) {
+        fill(100,200,443);  
+        stroke(100,200,443);
+        rect(-10,250,700, 60);
+        stroke(0,0,0);
+        fill(21, 255, 0);
+        ellipse(a,280,50,50);
+        a=a+6;
+        if (a >= 625)  {
+            a=a-650;    
+        }
+    }
+};
+};
+homePage();
+circle();
+
+
+};
+game();
